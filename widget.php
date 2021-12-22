@@ -14,9 +14,25 @@ $json_data=file_get_contents($rest_query);
 $decoded=json_decode($json_data);
 //print_r($decoded);
 
-foreach ($decoded as $key=>$decode){
+//Contenuto dati da API
+$features=$decoded->features[0]->attributes;
+
+/*DEBUG per dati
+ *
+ * foreach ($decoded as $key=>$decode){
     echo sprintf('<br><strong>%s</strong><br>',$key);
     print_r($decode);
     echo '<hr>';
-}
+    if($key=='features'){
+       // $features=$decode[0];
+        foreach ($decode[0] as $key=>$decode){
+            echo sprintf('<br><strong>%s</strong><br>',$key);
+            print_r($decode);
+            echo '<hr>';
+        }
+    }
+}*/
 
+echo '<hr><h1>';
+print_r($features);
+echo'</h1>';
