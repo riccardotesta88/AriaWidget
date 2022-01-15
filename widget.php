@@ -2,7 +2,7 @@
 
 /***
  * Sviluppo Riccardo Testa - 2021
- * Dati Regione Piemonte
+ * Dati Regione Piemonte - Dati servizio rest Regione Piemonte
  */
 
 $comune = "Acqui Terme"; //Indicazione del nome del comune
@@ -31,27 +31,6 @@ $stati = [
         'colore' => 'red'
     ]
 ];
-
-
-/*DEBUG per dati
- *
- * foreach ($decoded as $key=>$decode){
-    echo sprintf('<br><strong>%s</strong><br>',$key);
-    print_r($decode);
-    echo '<hr>';
-    if($key=='features'){
-       // $features=$decode[0];
-        foreach ($decode[0] as $key=>$decode){
-            echo sprintf('<br><strong>%s</strong><br>',$key);
-            print_r($decode);
-            echo '<hr>';
-        }
-    }
-}*/
-
-//echo '<hr><h1>';
-//print_r($features);
-//echo'</h1>';
 
 $nome_comune = $features->COMUNE_NOM;
 $teplate_struct = '<span style="text-transform: uppercase; font-weight: 800">Comune di %s</span><br>';
